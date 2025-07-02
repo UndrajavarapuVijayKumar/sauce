@@ -12,12 +12,12 @@ public class tc001 extends BaseTest	{
 	@BeforeMethod
 	public void setup() throws IOException{
 		System.out.println("before method");
-		init();
+		init("chrome");
 	}
 	@Test
 	public void tc01() {
 		System.out.println("Actual Test");
-		
+		launchBrowser(childProp.getProperty("url"));
 	}
 	@AfterMethod
 	public void tearDown() {
