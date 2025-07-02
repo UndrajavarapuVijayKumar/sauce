@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import com.aventstack.extentreports.*;
 
 public class BaseTest {
 	public static String projectpath = System.getProperty("user.dir");
@@ -21,6 +22,8 @@ public class BaseTest {
 	public static Properties childProp;
 	
 	public static WebDriver driver;
+	public static ExtentReports extent;
+	
 	
 	public static void init(String browser) throws IOException {
 		fis = new FileInputStream(projectpath+"//dataSources//commondata.properties");
